@@ -3,7 +3,7 @@ import torch
 import torch.optim as optim
 from torchvision import datasets, transforms
 
-from model import LinearNet
+from model import LinearNet, CNNNet
 from train import train
 from test import test
 
@@ -62,7 +62,10 @@ def main():
     train_loader = torch.utils.data.DataLoader(dataset1,**train_kwargs)
     test_loader = torch.utils.data.DataLoader(dataset2, **test_kwargs)
 
-    model = LinearNet().to(device)
+    # model = LinearNet().to(device)
+    model = CNNNet().to(device)
+    print(model)
+
     optimizer = optim.Adadelta(model.parameters(), lr=args.lr)
 
     for epoch in range(1, args.epochs + 1):

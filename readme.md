@@ -13,8 +13,21 @@
 - e: epoch
   
 ### linear
-| model      | Accuracy |
-| ----------- | ----------- |
-| mnist_linear_b128_e10.pt   | 80%       |
-| mnist_linear_b128_e20.pt   | 80%       |
-| mnist_linear_b128_e40.pt   | 90%       |
+
+- LinearNet
+  
+| model      | Eval Accuracy | Train Accuracy |
+| ----------- | ----------- | ----------- |
+| mnist_linear_b128_e10.pt   | 80%       | 97% |
+| mnist_linear_b128_e20.pt   | 80%       | 98% |
+| mnist_linear_b128_e40.pt   | 90%       | 98% |
+| mnist_linear_b128_e50.pt   | 90%       | 98% |
+| mnist_linear_b128_e100.pt  | 90%       | 98% |
+
+### CNN
+
+- CNNNet
+  
+| model      | Eval Accuracy | Train Accuracy |
+| ----------- | ----------- | ----------- |
+| mnist_cnn_b128_e10.pt   | 100%       | 98% |

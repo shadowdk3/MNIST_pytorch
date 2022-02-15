@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 import os
 
-from model import LinearNet
+from model import LinearNet, CNNNet
 
 def load_image(img_path):
     img = cv2.imread(img_path)
@@ -43,7 +43,8 @@ def main():
 
     image_files = glob.glob(args.eval + '*.png')
 
-    model = LinearNet().to(device)
+    # model = LinearNet().to(device)
+    model = CNNNet().to(device)
     model.load_state_dict(torch.load(args.model))
     model.eval()
 
